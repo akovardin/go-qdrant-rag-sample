@@ -62,7 +62,7 @@ func RunRAG(question string, topK int) (RAGResponse, error) {
 	}
 
 	reqBody := map[string]interface{}{
-		"model": "gpt-4o-2024-08-06",
+		"model": "GigaChat-2-Max",
 		"messages": []map[string]string{
 			{"role": "user", "content": prompt},
 		},

@@ -42,7 +42,7 @@ func CreateCollection() error {
 	client := resty.New()
 	body := map[string]interface{}{
 		"vectors": map[string]interface{}{
-			"size":     1536,
+			"size":     1024,
 			"distance": "Cosine",
 		},
 	}

@@ -19,7 +19,7 @@ func GetEmbedding(text string) ([]float32, error) {
 	client := resty.New()
 	requestBody := map[string]interface{}{
 		"input": text,
-		"model": "text-embedding-ada-002",
+		"model": "Embeddings",
 	}
 
 	resp, err := client.R().

@@ -61,5 +61,5 @@ func SetupAPI() {
 		return c.JSON(response)
 	})
 
-	log.Fatal(app.Listen(":8080"))
+	log.Fatal(app.Listen(":8081"))
 }
