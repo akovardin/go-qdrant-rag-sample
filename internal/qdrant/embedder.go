@@ -8,6 +8,8 @@ import (
 	"github.com/go-resty/resty/v2"
 )
 
+const base = "http://localhost:8080/v1"
+
 func GetEmbedding(text string) ([]float32, error) {
 	apiKey := os.Getenv("OPENAI_API_KEY")
 	if apiKey == "" {
@@ -24,7 +26,7 @@ func GetEmbedding(text string) ([]float32, error) {
 		SetHeader("Authorization", "Bearer "+apiKey).
 		SetHeader("Content-Type", "application/json").
 		SetBody(requestBody).
-		Post("https://api.openai.com/v1/embeddings")
+		Post(base + "/embeddings")
 
 	if err != nil {
 		return nil, err

@@ -69,7 +69,7 @@ func RunRAG(question string, topK int) (RAGResponse, error) {
 	}
 	encoded, _ := json.Marshal(reqBody)
 
-	req, _ := http.NewRequest("POST", "https://api.openai.com/v1/chat/completions", bytes.NewBuffer(encoded))
+	req, _ := http.NewRequest("POST", base+"/chat/completions", bytes.NewBuffer(encoded))
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Authorization", "Bearer "+apiKey)
 
