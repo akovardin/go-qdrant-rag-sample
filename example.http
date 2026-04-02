@@ -1,0 +1,5 @@
+### Search
+GET http://localhost:8081/search?q=samsung
+
+### RAG
+GET http://localhost:8081/rag?q=sonyPS5&top=10
